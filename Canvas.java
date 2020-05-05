@@ -33,8 +33,9 @@ public class Canvas extends JPanel implements MouseListener
 
         synchronized (Client.bullets)
         {
-            for (Bullet b : Client.bullets)
+            for (int i = 0; i < Client.bullets.size(); i++)
             {
+                Bullet b = Client.bullets.get(i);
                 if (b.alive)
                 {
                     g2d.setColor(Bullet.color);
@@ -46,8 +47,9 @@ public class Canvas extends JPanel implements MouseListener
 
         synchronized (Client.players)
         {
-            for(Player player : Client.players)
+            for(int i = 0; i < Client.players.size(); i++)
             {
+                Player player = Client.players.get(i);
                 if(player.alive)
                 {
                     g2d.setColor(Player.color);
