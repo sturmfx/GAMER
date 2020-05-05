@@ -7,5 +7,5 @@ public class Data
     public static final double delta = 0.70710678118;
     public static volatile int hp = 100;
     public static final int damage = 19;
-    public static int player_limit = 10;
+    public static int player_limit = 40;
 }
