@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Map
 {
-    static int n = 10;
+    static int n = 30;
     static int min_width = 100;
     static int max_width = 2000;
     static int min_height = 100;
