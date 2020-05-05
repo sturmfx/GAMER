@@ -87,7 +87,7 @@ public class Client extends JFrame implements KeyListener
                     updateBullets();
                     updateBots();
 
-                    if(counter % 20 == 0)
+                    if(counter % 10 == 0)
                     {
                         repaint();
                     }
@@ -114,7 +114,7 @@ public class Client extends JFrame implements KeyListener
                         addBot();
                     }
 
-                    if(counter % 5011 == 0)
+                    if(counter % 207 == 0)
                     {
                         for(int i = 0; i < players.size(); i++)
                         {
@@ -302,7 +302,7 @@ public class Client extends JFrame implements KeyListener
     public static void main(String[] args) throws IOException
     {
         System.setProperty("sun.java2d.opengl", "true");
-        Client client = new Client(1600, 800);
+        Client client = new Client(1900, 1000);
     }
 
     @Override
