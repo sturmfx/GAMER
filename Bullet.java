@@ -1,4 +1,5 @@
 
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -92,12 +93,15 @@ public class Bullet
                     {
                         for (Player player : players)
                         {
-                            if (radius + player.radius >= Math.sqrt((x - player.x) * (x - player.x) + (y - player.y) * (y - player.y)))
+                            if(player.alive && alive)
                             {
-                                player.hp = player.hp - damage;
-                                alive = false;
-                                end = System.currentTimeMillis();
-                                break;
+                                if (radius + player.radius >= Math.sqrt((x - player.x) * (x - player.x) + (y - player.y) * (y - player.y)))
+                                {
+                                    player.hp = player.hp - damage;
+                                    alive = false;
+                                    end = System.currentTimeMillis();
+                                    break;
+                                }
                             }
                         }
                         x += dx;
